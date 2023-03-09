@@ -214,6 +214,11 @@ public class ReactSliderManager extends SimpleViewManager<ReactSlider> {
     else view.setScaleX(1f);
   }
 
+  @ReactProp(name = "progressBarVisible", defaultBoolean = true)
+  public void setProgressBarVisible(ReactSlider view, boolean visible) {
+    view.setProgressBarVisible(visible);
+  }
+
   @ReactProp(name = "accessibilityUnits")
   public void setAccessibilityUnits(ReactSlider view, String accessibilityUnits) {
     view.setAccessibilityUnits(accessibilityUnits);

@@ -7,8 +7,10 @@
 package com.reactnativecommunity.slider;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
@@ -231,6 +233,14 @@ public class ReactSlider extends AppCompatSeekBar {
       }
     } else {
       setThumb(getThumb());
+    }
+  }
+
+  public void setProgressBarVisible(boolean visible) {
+    if (!visible) {
+      ColorStateList sl = ColorStateList.valueOf(Color.TRANSPARENT);
+      setProgressTintList(sl);
+      setProgressBackgroundTintList(sl);
     }
   }
 }
